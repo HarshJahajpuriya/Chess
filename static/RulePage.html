@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chess Mate </title>
+    <link rel="stylesheet" href="/RulePage.css">
+</head>
+
+<body style="margin: 0;">
+
+    <div class="background-div">
+        <div class="backdrop">
+            <main>
+                <!-- <h2 class="rules-heading"> RULES </h2> -->
+                <div class="rules-heading">RULES</div>
+                <div class="rules-main-section">
+
+                    <div class="rules-content">
+                        <h2> The pieces are placed, one on a square, as follows: </h2>
+                        <ul>
+                            <li>
+                                The <b> Rooks </b> are placed on the outside corners, right and left edge.
+                            </li>
+                            <li>
+                                The <b> Knights </b> are placed immediately inside of the rooks.
+                            </li>
+                            <li>
+                                The <b> Bishops </b> are placed immediately inside of the knights.
+                            </li>
+                            <li>
+                                The <b> Queen </b> is placed on the central square of the same color of that of the 
+                                player:
+                                white queen on the white square and black queen on the black square.
+                            </li>
+                            <li>
+                                The <b> King </b> takes the vacant spot next to the queen.
+                            </li>
+                            <li>
+                                The <b> Pawns </b> are placed one square in front of all of the other pieces.
+                            </li>
+                        </ul>
+
+                        <h2> Basic moves </h2>
+                        <ul>
+                            <li>
+                                The <b> King </b> moves exactly one square horizontally, vertically, or diagonally. A
+                                special move with the king known as Castling is allowed only once per player, per game.
+                            </li>
+                            <li>
+                                A <b> Rook </b> moves any number of vacant squares horizontally or vertically. It also
+                                is
+                                moved when castling.
+                            </li>
+                            <li>
+                                A <b> Bishop </b> moves any number of vacant squares diagonally.
+                            </li>
+                            <li>
+                                The <b> Queen </b> moves any number of vacant squares horizontally, vertically, or
+                                diagonally.
+                            </li>
+                            <li>
+                                A <b> Knight </b> moves to the nearest square not on the same rank, file, or diagonal.
+                                (This
+                                can be thought of as moving two squares horizontally then one square vertically, or
+                                moving
+                                one square horizontally then two squares vertically—i.e. in an "L" pattern.) The knight
+                                is
+                                not blocked by other pieces: it jumps to the new location.
+                            </li>
+                            <li>
+                                <b>Pawns </b> have the most complex rules of movement:
+                                <ul>
+                                    <li class="inner-li">
+                                        A pawn moves straight forward one square, if that square is vacant. If it has
+                                        not
+                                        yet moved, a pawn also has the option of moving two squares straight forward,
+                                        provided both squares are vacant. Pawns cannot move backwards.
+                                    </li>
+                                    <li class="inner-li">
+                                        Pawns are the only pieces that capture differently from how they move. A pawn
+                                        can
+                                        capture an enemy piece on either of the two squares diagonally in front of the
+                                        pawn
+                                        (but cannot move to those squares if they are vacant).
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2> Castling: </h2>
+                        <p class="line-spacing">
+                            Castling consists of moving the king two squares towards a rook, then placing the rook on
+                            the
+                            other side of the king, adjacent to it. It is not allowed to move both king and rook in the
+                            same
+                            time, because "Each move must be played with one hand only.". Castling is only permissible
+                            if
+                            all of the following conditions hold:
+                        </p>
+                        <ul>
+                            <li>
+                                The king and rook involved in castling must not have previously moved;
+                            </li>
+                            <li>
+                                There must be no pieces between the king and the rook;
+                            </li>
+                            <li>
+                                The king may not currently be in check, nor may the king pass through or end up in a
+                                square
+                                that is under attack by an enemy piece (though the rook is permitted to be under attack
+                                and
+                                to pass over an attacked square);
+                            </li>
+                            <li>
+                                The castling must be kingside or queenside as shown in the diagram.
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <div class="side-pic">
+                        <h1 class="piece-images-heading">Images Of Pieces</h1>
+                                                
+                            <div class="pieces-images">
+
+                                <div class="piece-image-div">
+                                    <div class="piece-image-container piece-image-left-container">
+                                        <div class="piece rook"></div>
+                                    </div>
+                                    <div class="piece-image-container piece-image-right-container">
+                                        <div class="piece knight"></div>
+                                    </div>
+                                    <div class="piece-name-container piece-name-left-container"> ROOK </div>
+                                    <div class="piece-name-container piece-name-right-container"> KNIGHT </div>
+                                </div>
+                                
+                                <div class="piece-image-div">
+                                    <div class="piece-image-container piece-image-left-container ">
+                                        <div class="piece bishop"></div>
+                                    </div>
+                                    <div class="piece-image-container piece-image-right-container">
+                                        <div class="piece queen"></div>
+                                    </div>
+                                    <div class="piece-name-container piece-name-left-container"> BISHOP </div>
+                                    <div class="piece-name-container piece-name-right-container"> QUEEN </div>
+                                </div>
+                                
+                                <div class="piece-image-div">
+                                    <div class="piece-image-container piece-image-left-container">
+                                        <div class="piece king"></div>
+                                    </div>
+                                    <div class="piece-image-container piece-image-right-container">
+                                        <div class="piece pawn"></div>
+                                    </div>
+                                    <div class="piece-name-container piece-name-left-container"> KING </div>
+                                    <div class="piece-name-container piece-name-right-container"> PAWN </div> 
+                                </div>
+                                
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

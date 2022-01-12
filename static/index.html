@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Mate</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="/RulePage.css">
+    <link rel="stylesheet" href="/chess.css">
+</head>
+<body>
+
+    <!-- My Alert -->
+    <div class="alert-div-container">
+        <div class="alert-div">
+            <div class="alert-message"></div>
+        </div>
+    </div>
+
+    <main class="container">
+       
+        <!-- My Confirm -->
+        <div class="confirm-div-container">
+            <div class="confirm-div">
+                <div class="confirm-message">Ask Harsh Kumar to play?</div>
+                <button onclick="confirmation(true)" class="confirm-OK btn text-success">OK</button>
+                <button onclick="confirmation(false)" class="confirm-CANCEL btn text-danger">CANCEL</button>
+                <div class="add-friend-checkbox-container">
+                    <label class="wantsToAddFriend-label" for="wantsToAddFriend" style="width: auto;">
+                        <input type="checkbox" name="wantsToAddFriend" id="wantsToAddFriend">
+                    Add as friend </label>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Rules Reference Container -->
+        <div onclick="displayRules()" class="rules-reference-div-backdrop"></div>
+        <div class="rules-reference-div">
+            <p>
+                How to <br>
+                play?
+            </p>
+        </div>
+        <div id="backdrop"> </div>
+
+        <!-- Titles -->
+        <div class="title-holder">
+            <div class="title">CHESS MATE</div>
+            <button id="btnLogin" class="btn " style="margin-left: auto; ">Login</button>
+            <button id="btnSignup" class="btn " style="width: 82px; ">Register</button>
+        </div>
+        <p class="subtitle"> Gymnasium for the mind </p>
+
+        <!-- Login Form -->
+        <div id="loginModal" class="modal" style="visibility: hidden;">
+            <div class="modal-head">
+                <div class="modal-title">LOGIN</div>
+                <button type="button" class="close-modal" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="loginForm" >
+                <label for="phone"> Phone </label> <input type="tel" name="phone" maxlength="10"> <br>
+                <label for="password"> Password </label> <input type="password" name="password"> <br>
+                <br>
+                <button class="btn guest-account-form-btn" type="button"> Play as guest </button>
+                <button class="btn login-form-submit-btn" type="submit"> Login </button>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupModal" class="modal" style="visibility: hidden;">
+            <div class="modal-head">
+                <div class="modal-title">Signup</div>
+                <button type="button" class="close-modal" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="signupForm" >
+                <label for="userName"> Name </label> <input type="text" name="userName"> <br>
+                <label for="phone"> Phone </label> <input type="tel" name="phone" maxlength="10"> <br>
+                <label for="password"> Password </label> <input type="password" name="password"> <br>
+                <br>
+                <button class="btn signup-form-submit-btn" type="submit"> Register </button>
+            </form>
+        </div>
+        
+        <!-- Guest Account From -->
+        <div id="guestModal" class="modal" style="visibility: hidden;">
+            <div class="modal-head">
+                <div class="modal-title">Guest</div>
+                <button type="button" class="close-modal" >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="guestForm" >
+                <label for="userName"> Name </label> <input type="text" name="userName"> <br>
+                <br>
+                <button class="btn guest-form-submit-btn" type="submit"> Continue </button>
+            </form>
+        </div>
+
+        <!-- Friend List -->
+        <div class="side-panel">
+            <h1>Friends</h1>
+            <ul id="friend-list">
+                <div class="no-friend">
+                    <p>
+                        No <br> Friends <br> Yet ...
+                    </p>
+                </div>
+                <!-- <li class="friend">
+                    <div class="name">Harsh Kumar Jahajpuriya</div>
+                    <button class="btn invite-friend-btn">+</button>
+                </li>
+                <li class="friend">
+                    <div class="name">Pawan Kumar Jahajpuriya</div>
+                    <button class="btn invite-friend-btn">+</button>
+                </li>
+                <li class="friend">
+                    <div class="name">Yash Kumar Jahajpuriya</div>
+                    <button class="btn invite-friend-btn">+</button>
+                </li> -->
+            </ul>            
+        </div>
+
+        <!-- Opponent Input Container -->
+        <div class="opponent-input-container">
+            <label class="opponent-input-label" for="opponentId">Enter Opponent ID OR Phone number</label> 
+            <input type="text" name="opponentId" maxlength="10" onkeyup="onOpponentIdInputKeyUp(this)">
+        </div>
+
+        <!-- Challenge Request -->
+        <div class="challenge-request-container">
+            <p class="challenge"></p> 
+            <button type="button" class=" green-tick" onclick="challengeAccepted()"> 
+                <span aria-hidden="true"></span>
+            </button>
+            <button type="button" class="red-cross" onclick="challengeRejected()"> 
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Credits -->
+        <p class="subtitle credits">Developed by <b>Harsh Kumar Jahajpuriya</b></p>
+     
+    </main> 
+    
+    <script src="/js/socket.io.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/entities.js"></script>
+    <script src="/index.js"></script>
+</body>
+
+</html>
+

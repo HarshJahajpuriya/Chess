@@ -1,0 +1,454 @@
+
+body{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1316px;
+    min-height: 696px;
+    overflow: auto;
+}
+
+#backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    background-color: rgba(54, 47, 47, 0.383);
+}
+
+main{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/chess.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;    
+    min-width: 1316px;
+    min-height: 696px;
+}
+
+.alert-div-container, .confirm-div-container {
+    text-align: center; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 42.7%; 
+    top: -130px;
+    transition-duration: 1000ms;
+}
+
+.alert-div, .confirm-div {
+    background: linear-gradient(to right bottom, whitesmoke, rgb(146, 122, 90));
+    background-color: whitesmoke;
+    border: 4px solid rgb(146, 122, 90);
+    margin: 4px;
+    padding: 8px 16px;
+    border-radius: 7px;
+}
+
+.alert-message, .confirm-message {
+    padding: 6px 10px 6px 0;
+    text-align: right;
+    color: rgb(134, 108, 66);
+    font-size: large;
+}
+
+.confirm-div button {
+    font-size: small;
+}
+
+.rules-reference-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 66px;
+    margin-left: 60px;
+    margin-top: 30px;
+    background-image: url('./images/question_mark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.rules-reference-div-backdrop {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 80px;
+    margin-left: 60px;
+    margin-top: 30px;
+    background-color: rgba(17, 17, 17, 0.274);
+}
+
+.rules-reference-div-backdrop:hover {
+    cursor: pointer;
+}
+
+.rules-reference-div p {
+    color: rgb(189, 150, 93);
+    margin-left: 46%;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 8%;
+}
+
+.container{
+    /* padding: 32px 16px; */
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.title-holder {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+
+.title{
+    /* color: rgb(141, 125, 99);
+    font-weight: 300;
+    font-size: 46px;
+    margin-bottom: 24px;
+    line-height: 64px;
+    margin-left: 36%; */
+
+    color: rgb(141, 125, 99);
+    font-weight: 800;
+    font-size: 56px;
+    /* margin-bottom: 24px; */
+    line-height: 90px;
+    margin-left: 38%;
+}
+
+.title-holder .btn {
+    height: 36px;
+    width: 72px;
+    margin-top: 18px;
+    border-radius: 8px;
+    background-color: rgb(146, 122, 90);
+    border-color: rgb(190, 168, 142);
+    color: rgb(190, 168, 142);
+    padding: 2px 6px;
+}
+
+.title-holder .btn:hover {
+    background-color: rgb(190, 168, 142);
+    border-color: rgb(146, 122, 90);
+    color: rgb(128, 107, 82);
+}
+
+.logged-in-user-info {
+    margin-left: auto;
+}
+
+.logged-in-user-name {
+    color: bisque;
+    margin-left: auto;
+    padding-top: 18px;
+    padding-right: 16px;
+    padding-bottom: 6px;
+}
+
+.logged-in-user-id {
+    color: bisque;
+    margin-left: auto;
+    /* padding-top: 28px; */
+    padding-right: 16px;
+}
+
+
+.subtitle{
+    color: rgb(171 151 118);
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.modal{
+    position: fixed;
+    z-index: 110;
+    display: inline-block;
+    padding: 0px 10px 10px 10px;
+    margin: 48px;
+    /* margin-top: 130px; */
+    margin-top: 208px;
+    background: linear-gradient(to right bottom, whitesmoke,  rgb(146, 122, 90));
+    background-color: whitesmoke;
+    border: 4px solid rgb(146, 122, 90);
+    border-radius: 4px;
+    margin-left: -156px;
+}
+
+.modal-head {
+    margin: 5px;
+}
+
+.modal-title {
+    display: inline-block;
+    margin-right: 73px;
+    font-weight: 800;
+    color: rgb(134, 108, 66);
+    font-size: x-large;
+}
+
+.close-modal {
+    margin-right: -109px;
+    border: 2px solid rgb(160, 129, 73);
+    border-radius: 6px;
+    color: rgb(146, 122, 90);
+    box-shadow: inset 2px 2px 5px rgba(146, 122, 90, 0.5);
+}
+
+.close-modal:hover, .close-rules:hover{
+    color:whitesmoke;
+    background-color:  rgb(146, 122, 90);
+    cursor: pointer;
+}
+
+
+
+
+label {
+    /* display: inline-block;
+    width: 74px;
+    padding: 6px 10px 6px 0;
+    text-align: right;
+    color: rgb(134, 108, 66);;
+    font-size: small; */
+
+    display: inline-block;
+    width: 88px;
+    padding: 6px 10px 6px 0;
+    text-align: right;
+    color: rgb(134, 108, 66);
+    font-size: large;
+}
+
+input {
+    padding: 3px 8px;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 7px;
+    margin-right: 6px;
+}
+
+input:hover {
+    border-color: rgb(146, 122, 90); 
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: rgb(146, 122, 90); 
+    color: gray;
+}
+
+.btn {
+    height: 28px;
+    border-radius: 8px;
+    padding: 2px 4px;
+    margin: 0 8px;
+    border: 2px solid rgb(160, 129, 73);
+    color: rgb(146, 122, 90);
+    box-shadow: 2px 2px 5px rgba(146, 122, 90, 0.5);
+    background: whitesmoke;
+    font-size: large;
+}
+
+
+.btn:hover {
+    color:whitesmoke;
+    background-color:  rgb(146, 122, 90);
+    cursor: pointer;
+}
+
+
+.text-danger {
+    color: orangered;
+}
+
+.text-success {
+    color: limegreen;
+}
+
+.error {
+    padding-right: 8px;
+}
+
+.side-panel {
+    position: fixed;
+    left: -310px;
+    width: 300px;
+    height: 74vh;
+    background-color: rgba(54, 47, 47, 0.683);
+    border: 4px solid rgb(141, 125, 99);
+    border-left: none;
+    transition-duration: 800ms;
+}
+
+.side-panel>h1 {
+    color: rgb(141, 125, 99);
+    margin-right: 20px;
+    margin-left: 20px;
+    border-bottom: 2px solid bisque;
+    border-radius: 4px;
+}
+
+#friend-list {
+    padding: 0;
+    height: calc(100vh - 258px);
+}
+
+.no-friend {
+    height: 240px;
+    width: auto;
+    margin: 20px;
+    background-color: whitesmoke;
+    background: linear-gradient(to right bottom, whitesmoke, rgb(146, 122, 90));
+    border: 10px solid rgb(141, 125, 99);
+    border-radius: 4px;
+    display: none;
+}
+
+.no-friend>p {
+    font-size: xxx-large;
+    font-style: italic;
+    color: rgb(92, 77, 62);
+    margin: 36px 0;
+}
+
+.friend {
+    margin: 0 12px;
+}
+
+.friend>.name {
+    color: bisque;
+    font-family: fangsong;
+    height: 20px;
+    padding: 6px;
+    border-bottom: 1px solid rgb(141, 125, 99);
+}
+
+.friend * {
+    display: inline-block;
+}
+
+.invite-friend-btn {
+    float: right;
+    width: 28px;
+}
+
+.opponent-input-container {
+    /* position: fixed;
+    top: 164px;
+    left: 36.4%;
+    z-index: -20;
+    width: 420px;
+    height: 60px;
+    display: inline-block;
+    padding-top: 20px;
+    margin-top: 15%;
+    background: linear-gradient(to right bottom, whitesmoke, rgb(146, 122, 90));
+    background-color: whitesmoke;
+    border: 4px solid rgb(146, 122, 90); */
+    position: fixed;
+    z-index: -20;
+    left: 35%;
+    display: inline-block;
+    background: linear-gradient(to right bottom, whitesmoke, rgb(146, 122, 90));
+    background-color: whitesmoke;
+    border: 4px solid rgb(146, 122, 90);
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-top: 12%;
+}
+
+.opponent-input-label {
+    width: auto;
+}
+
+.opponent-input-error {
+    padding-right: 24px;
+}
+
+.challenge-request-container {
+    background-color: whitesmoke;
+    position: fixed;
+    right: -400px;
+    text-align: right;
+    font-size: large;
+    margin-top: auto;
+    bottom: 60px;
+    background: linear-gradient(to right bottom, whitesmoke, rgb(146, 122, 90));
+    background-color: whitesmoke;
+    border: 4px solid rgb(146, 122, 90);
+    color: rgb(107, 88, 58);
+    transition-duration: 1000ms;
+}
+
+.challenge-request-container * {
+    display: inline-block;
+}
+ 
+.challenge-request-container p {
+    display: inline-block;
+    width: 252px;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.challenge-request-container button {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    font-size: large;
+    border: 2px solid rgb(160, 129, 73);
+    color: rgb(146, 122, 90);
+    box-shadow: 2px 2px 5px rgba(146, 122, 90, 0.5);
+    border-radius: 8px;
+}
+
+.red-cross {
+    background-image: url('/images/red_cross.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.green-tick {
+    background-image: url('/images/green_tick.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.credits{
+    position: fixed;
+    right: 36px;
+    text-align: right;
+    font-size: large;
+    margin-top: auto;
+    bottom: 0;
+}
+
+.credits b {
+    padding-right: 12px;
+}
+
+
+@media(max-width : 1316px) ,(max-height : 696px) {
+    .subtitle {
+        margin-left: 88px;
+    }
+
+    .opponent-input-container {
+        position: absolute;
+        left: 380px;
+    }
+
+    main {
+        overflow: scroll;
+    }
+}

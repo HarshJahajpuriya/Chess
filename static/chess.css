@@ -1,0 +1,121 @@
+/* html {
+    width: 100vw; 
+    height: 100vh;
+} */
+
+body {
+    /* width: 100vw; */
+    min-height: 100vh;
+    min-width: 1310px;
+    margin: 0px;
+    background-image: url(./images/chess.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.board {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    min-width: 1070px;
+    /* padding-bottom: 54px; */
+    /* background-color: rgba(61, 60, 60, 0.349); */
+  
+}
+
+table {
+    margin: auto;
+    margin-top: 80px;
+    background-color: #e7e7e7;
+    border: 12px solid rgb(92, 77, 62);
+    border-radius: 3px;
+    /* box-shadow: 8px 8px 4px 4px rgb(92, 77, 62); */
+}
+
+table,td {
+    border-collapse: collapse;
+    margin: 0;
+    margin-top: 80px;
+    border-radius: 3px;
+    box-sizing: border-box;            
+}
+
+td {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    background-size: auto 86%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 300ms;
+}
+
+.possible-position {
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px orangered inset;
+    transition-duration: 300ms;
+}
+
+.player-one {
+    width: 32%;
+    min-width: 350px;
+}
+
+.player-two {
+    width: 32%;
+    min-width: 350px;
+}
+
+h1 {
+    color: rgb(171 151 118);
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: rgb(171 151 118);
+    padding: 10px;
+    margin-top: 0;
+}  
+
+.board h4{
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 50px;
+    font-weight: 300;
+} 
+
+.board h5 {
+    color: rgb(171 151 118);
+    margin-top: 0;
+}
+
+.board h3 {
+    text-align: center;
+    color: wheat;
+    margin-top: 0;
+}
+
+.dead-pieces {
+    display: inline;
+}
+
+.dead-pieces div {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    margin: 18px;    
+    color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dead-pieces div img {
+    height: 72px;
+    width: auto;
+}

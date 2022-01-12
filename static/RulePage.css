@@ -1,0 +1,391 @@
+/* body {
+    width: 100vw;
+    height: 100vh;
+    min-width: 1080px;
+    min-height: 580px;
+    overflow: hidden;
+}
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.862);
+    z-index: 5;
+}
+
+.background-div {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: block;
+    min-width: 1080px;
+    min-height: 580px;
+    z-index: -1;
+    background-image: url(./resources/chess.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-img {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: block;
+    min-width: 1080px;
+    min-height: 580px;
+    z-index: -1;
+}
+
+.main {
+    position: fixed;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    width: 70%;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 100;
+}
+
+.rules-heading {
+    color: rgb(92, 77, 62);
+    min-width: 740px;
+}
+
+.rules-content {
+    height: 620px;
+    min-width: 740px;
+    min-height: 620px;
+    color: rgb(124, 106, 88);
+    text-align: left;
+    overflow-y: scroll;
+    font-size: large;
+}
+
+/* .piece-images {
+    position: fixed;
+    display: inline-block;
+    width: 26%;
+    left: 72%;
+    text-align: center;
+} */
+/* 
+li {
+    line-height: 28px;
+}
+
+.line-spacing{
+    line-height: 28px;
+}
+
+.inner-li {
+    list-style-type: circle;
+}
+
+
+.side-pic {
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    right: 0;
+    top: 60px;
+    width: 26%;
+    min-width: 380px;
+    padding: 10px 20px;
+    z-index: 99;
+}
+
+.pi {
+    color: rgb(124, 106, 88);
+    text-align: center;
+}
+
+.piece-image-container {
+    display: inline-block;
+    width: 156px;
+    height: 150px; 
+    margin: 2%;
+    background: radial-gradient(rgb(197, 197, 186), rgb(139, 128, 112), rgb(80, 70, 60), rgb(102, 92, 81));
+}
+
+.piece-image-left-container {
+    left: 0;
+}
+
+.piece-image-right-container {
+    right: 0;
+    margin: 2%;
+}
+
+.rook {
+    height: 82px;
+    margin-top: 34px;
+    background-image: url(./resources/rook.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.knight {
+    height: 82px;
+    margin-top: 34px;
+    background-image: url(./resources/knight.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.bishop {
+    height: 82px;
+    margin-top: 34px;
+    background-position: center;
+    background-image: url(./resources/bishop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.queen {
+    height: 98px;
+    margin-top: 22px;
+    background-image: url(./resources/queen.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.king {
+    height: 104px;
+    margin-top: 20px;
+    background-image: url(./resources/king.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.pawn {
+    height: 72px;
+    margin-top: 44px;
+    background-image: url(./resources/pawn.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+
+.piece-name-container {    
+    display: inline-block;
+    width: 45%;
+    height: 10px;
+    margin:  0 2%;
+    color: rgb(194, 174, 155);
+    text-align: center;
+}
+
+.piece-name-left-container {
+    left: 0;
+}
+
+.piece-name-right-container {
+    right: 0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: bisque;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(92, 77, 62);
+}
+
+@media (max-width:1390px) {
+    .side-pic {
+        z-index: -101;
+    }
+
+    .main {
+        width: 98%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+ */ 
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.backdrop {
+    margin: 0;
+    background-color: rgba(17, 17, 17, 0.774); 
+}
+
+.background-div {
+    height: 100%;
+    width: 100%;
+    background-image: url('/images/chess.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.rules-heading {
+    color: rgb(171, 151, 118);
+    padding: 10px;
+    display: flex;
+    font-size: xxx-large;
+    font-weight: 700;
+    background-color: rgba(17, 17, 17, 0.774)
+}
+
+.heading-text {
+    display: inline-block;
+    flex: auto;
+}
+
+/* .close-btn {
+    display: inline-block;
+} */
+
+.rules-main-section {
+    display: flex;
+    background-color: rgba(17, 17, 17, 0.774)
+}
+
+.rules-content {
+    height: calc(100vh - 58px);
+    overflow-y: scroll;
+    color: rgb(144, 127, 112);
+    padding: 0 10px;
+    flex: 5;
+    text-align: left;
+}
+
+.rules-content h2 {
+    color: rgb(171, 151, 118);;
+    font-weight: 600;
+}
+
+.rules-content li {
+    line-height: 1.5;
+    font-size: large;
+}
+
+.rules-content p {
+    line-height: 1.5;
+    font-size: large;
+}
+
+.side-pic {
+    flex: 2;
+    text-align: center;
+}
+
+
+.piece-images-heading {
+    color: rgb(171, 151, 118);;
+}
+
+.piece-images {
+    display: flex;
+    width: 20px;
+    height: calc(100vh - 126px);
+}
+
+.piece-image-div {
+    display: block;
+    flex: 1;
+}
+
+.piece-image-container {
+    display: inline-block;
+    width: 86px;
+    height: 84px;
+    width: 156px;
+    height: 150px; 
+    margin: 2%;
+    background: radial-gradient(rgb(197, 197, 186), rgb(139, 128, 112), rgb(80, 70, 60), rgb(102, 92, 81));
+}
+
+.piece-image-right-container {
+    margin-left: auto;
+    margin: 2%;
+}
+
+.piece {
+    height: 66px; 
+    margin-top: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 96px;
+    margin-top: 28px;
+}
+
+.rook {
+    background-image: url(./images/black_rook.png);
+}
+
+.knight {
+    background-image: url(./images/black_knight.png);
+}
+
+.bishop {
+    background-image: url(./images/black_bishop.png);
+}
+
+.queen {
+    background-image: url(./images/black_queen.png);
+}
+
+.king {
+    background-image: url(./images/black_king.png);
+}
+
+.pawn {
+    height: 64px;
+    margin-top: 46px;
+    background-image: url(./images/black_pawn.png);
+}
+
+.piece-name-container {    
+    display: inline-block;
+    width: 36%;
+    height: 10px;
+    margin:  0 2%;
+    color: rgb(194, 174, 155);
+    text-align: center;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(92, 77, 62);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: bisque;
+}

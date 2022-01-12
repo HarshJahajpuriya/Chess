@@ -1,0 +1,23 @@
+{
+  "name": "minor",
+  "version": "1.0.0",
+  "description": "Minor Oct-2020",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Harsh Kumar Jahajpuriya",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "socket.io": "^3.0.4"
+  }
+}
