@@ -139,10 +139,10 @@ module.exports.findOpponent = (req, res, next) =>  {
             tmpUser.opponentID = opponentId;
             tmpUser.opponentSocket = loggedInUsersSocketMap.get(opponentId).socket;
             loggedInUsersSocketMap.set(req.session.user.mapId, tmpUser);
+            message = 'Opponent Found'
         } else 
             message = 'Opponent is playing a game.';
         
-        message = 'Opponent Found'
         
     } else {
         message = 'Invalid Opponent Id or Opponent is Offline.'
